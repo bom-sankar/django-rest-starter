@@ -14,7 +14,7 @@ node {
             sh 'virtualenv env -p python3.5'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
-            sh 'python manage.py runserver 0.0.0.0:8081'
+            sh 'python manage.py runserver'
 
         stage 'Deploy'
             sh './deployment/deploy_prod.sh'
