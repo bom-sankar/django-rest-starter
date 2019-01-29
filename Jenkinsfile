@@ -10,7 +10,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-       def app = docker.build("wardviaene/docker-nodejs-demo:sanky", '.').push()
+       def app = docker.build("bom-sankar/django-rest-starter:sanky", '.').push()
      }
    }
 }
